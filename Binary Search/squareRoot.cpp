@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int mySqrt(int x)
+{
+    int low = 1;
+    int high = x;
+
+    while (low <= high)
+    {
+        long long mid = low + (high - low) / 2;
+        long long val = mid * mid;
+        if (val <= x)
+        {
+            low = mid + 1;
+        }
+        else
+        {
+            high = mid - 1;
+        }
+    }
+
+    return high;
+}
+
+int main()
+{   
+    cout<<mySqrt(25);
+
+    return 0;
+}
