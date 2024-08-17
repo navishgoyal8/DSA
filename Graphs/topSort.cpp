@@ -16,7 +16,7 @@ void dfs(int node,int vis[],stack<int> &st,vector<int> adj[]){
 
 
 vector<int> topoSort(int V,vector<int> adj[]){
-    int vis[6] = {0};
+    int vis[V] = {0};
     stack<int> st;
     for(int i=0;i<V;i++){
         if(!vis[i]){
